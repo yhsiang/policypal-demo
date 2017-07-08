@@ -15,3 +15,4 @@ export const itemQueryPatterns = {
   'Mage': { intelligence: -1, vitality: -1},
   'Hunter': { dexerity: -1, vitality: -1},
 };
+export const userItemLimit = 5;

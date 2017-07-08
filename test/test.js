@@ -5,6 +5,7 @@ import {
   createItem,
   checkItem,
   filterItems,
+  getUserPoint,
 } from '../utils';
 
 
@@ -91,4 +92,48 @@ test('filter items', t => {
     },
   ]);
   t.deepEqual(items, expected, 'Items should be filtered');
+});
+
+test('calculate user point', t => {
+  t.plan(3)
+  t.equal(
+    getUserPoint({
+      level: 20,
+      job: 'Barbarian',
+      items: [
+        {level: 20, strength: 10, dexterity: 70, intelligence: 0, vitality: 0}
+      ]
+    }),
+    130,
+    'User point should be 130'
+  );
+
+  t.equal(
+    getUserPoint({
+      level: 15,
+      job: 'Barbarian',
+      items: [
+        // this could not happen because item level is higher than user.
+        {level: 20, strength: 70, dexterity: 10, intelligence: 0, vitality: 0},
+        {level: 20, strength: 30, dexterity: 10, intelligence: 10, vitality: 30},
+      ]
+    }),
+    220,
+    'User point should be 220'
+  );
+
+  t.equal(
+    getUserPoint({
+      level: 10,
+      job: 'Barbarian',
+      items: [
+        {level: 20, strength: 10, dexterity: 70, intelligence: 0, vitality: 0},
+        {level: 20, strength: 70, dexterity: 10, intelligence: 0, vitality: 0},
+        {level: 20, strength: 30, dexterity: 10, intelligence: 10, vitality: 30},
+      ]
+    }),
+    // it's not 230
+    200,
+    'User point should be 200'
+  );
 });

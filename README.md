@@ -8,7 +8,6 @@ User {
   name: String,
 }
 
-
 Item {
   name: String,
   level: Number,
@@ -16,4 +15,9 @@ Item {
   dexerity: Number,
   intelligence: Number,
   vitality: Number,
+}
+
+UserItems {
+  uid: ObjectId,
+  list: Array(5),
 }
