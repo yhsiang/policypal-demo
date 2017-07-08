@@ -26,6 +26,7 @@ export function createUser() {
 export function createItem(itemLv) {
   const level = itemLv? itemLv : random(maxItemLv)(minItemLv);
   const name = itemNameList[random(itemNameList.length)()];
+  // FIXME: always strength > dexerity > intelligence > vitality
   const [strength, dexerity, intelligence, vitality] = generateItemAttributes(level);
 
   return {
