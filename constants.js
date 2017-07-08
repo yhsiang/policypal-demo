@@ -8,3 +8,4 @@ export const itemAttrs = [ 'strength', 'dexerity', 'intelligence', 'vitality'];
 export const minItemAttrs = 0;
 export const itemAttrLimit = 4;
 export const itemNameList = ['Sword', 'Spear', 'Dagger', 'Huge Sword', 'Wand'];
+export const DB_URL = 'mongodb://localhost:27017/demo';

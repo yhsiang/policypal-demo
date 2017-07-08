@@ -12,6 +12,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-tape-runner": "^2.0.1",
     "express": "^4.15.3",
+    "mongodb": "^2.2.30",
     "tape": "^4.7.0"
   },
   "devDependencies": {},
