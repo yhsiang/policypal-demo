@@ -23,11 +23,9 @@ export function createUser() {
   };
 }
 
-export function createItem() {
-  const level = random(maxItemLv)(minItemLv);
-  //Math.floor(Math.random() * maxItemLv) + minItemLv;
+export function createItem(itemLv) {
+  const level = itemLv? itemLv : random(maxItemLv)(minItemLv);
   const name = itemNameList[random(itemNameList.length)()];
-  //itemNameList[Math.floor(Math.random() * itemNameList.length)];
   const [strength, dexerity, intelligence, vitality] = generateItemAttributes(level);
 
   return {
