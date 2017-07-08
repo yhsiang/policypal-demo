@@ -14,6 +14,8 @@
 3. docker exec -it $(demo_web) npm run init
 
 
+try http://localhost:3000/items?level=3&job=Barbarian
+
 ## Schema
 
 User {
