@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+   db:
+     image: mongo
+     restart: always
+
+   web:
+     depends_on:
+       - db
+     build:
+       context: .
+       dockerfile: Dockerfile
+     ports:
+       - "3000:3000"
+     restart: always
+     environment:
+       DB_URL: mongodb://db:27017/demo
+       PORT: 3000

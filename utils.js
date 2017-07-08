@@ -26,13 +26,13 @@ export function createUser() {
 export function createItem(itemLv) {
   const level = itemLv? itemLv : random(maxItemLv)(minItemLv);
   const name = itemNameList[random(itemNameList.length)()];
-  // FIXME: always strength > dexerity > intelligence > vitality
-  const [strength, dexerity, intelligence, vitality] = generateItemAttributes(level);
+  // FIXME: always strength > dexterity > intelligence > vitality
+  const [strength, dexterity, intelligence, vitality] = generateItemAttributes(level);
 
   return {
     level,
     strength,
-    dexerity,
+    dexterity,
     intelligence,
     vitality,
     name,
@@ -62,7 +62,7 @@ function compareAttrs(prev) {
     return (
       prev.level !== next.level ||
       prev.strength !== next.strength ||
-      prev.dexerity !== next.dexerity ||
+      prev.dexterity !== next.dexterity ||
       prev.intelligence !== next.intelligence ||
       prev.vitality !== next.vitality
     );
@@ -119,14 +119,14 @@ function getUserAttributes(user) {
         dexterity: user.level * 2,
         intelligence: user.level * 3,
         vitality: user.level * 3,
-      }
+      };
     case 'Hunter':
       return {
         strength: user.level * 2,
         dexterity: user.level * 3,
         intelligence: user.level * 1,
         vitality: user.level * 3,
-      }
+      };
     default:
       return {
         strength: 0,

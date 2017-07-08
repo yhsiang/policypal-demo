@@ -17,6 +17,11 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "babel-node server.js",
+    "createUsers": "babel-node scripts/1_create_users.js",
+    "createItems": "babel-node scripts/2_create_items.js",
+    "createUserItems": "babel-node scripts/5_create_userItems.js",
+    "init": "npm run createUsers && npm run createItems && npm run createUserItems",
     "test": "babel-tape-runner test/*.js"
   },
   "author": "",

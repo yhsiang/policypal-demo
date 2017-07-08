@@ -18,7 +18,7 @@ const app = express();
   job: required
   limit: optional
   strength:optional
-  dexerity: optional
+  dexterity: optional
   intelligence: optional
   vitality: optional
 */
@@ -28,7 +28,7 @@ app.get('/items', (req, res) => {
     job,
     limit,
     strength,
-    dexerity,
+    dexterity,
     intelligence,
     vitality,
   } = req.query;
@@ -38,7 +38,7 @@ app.get('/items', (req, res) => {
   if (!job || jobList.indexOf(firstCapital(job)) === -1) {
     return res.json({ message: 'job is required.'});
   }
-  const prepare = { level, strength, dexerity, intelligence, vitality };
+  const prepare = { level, strength, dexterity, intelligence, vitality };
   const query = Object
     .keys(prepare)
     .reduce((acc, cur) => {

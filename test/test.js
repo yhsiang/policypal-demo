@@ -31,14 +31,14 @@ test('create item', t => {
   t.ok(item.level <= 20, 'user level should be less than or equal to 20');
   t.ok(typeof item.strength === 'number', 'user strength should be a number');
   t.ok(item.strength >= 0, 'user strength should be greater than or equal to 0');
-  t.ok(typeof item.dexerity === 'number', 'user dexerity should be a number');
-  t.ok(item.dexerity>= 0, 'user dexerity should be greater than or equal to 0');
+  t.ok(typeof item.dexterity === 'number', 'user dexterity should be a number');
+  t.ok(item.dexterity>= 0, 'user dexterity should be greater than or equal to 0');
   t.ok(typeof item.intelligence === 'number', 'user intelligence should be a number');
   t.ok(item.intelligence >= 0, 'user intelligence should be greater than or equal to 0');
   t.ok(typeof item.vitality === 'number', 'user vitality should be a number');
   t.ok(item.vitality >= 0, 'user vitality should be greater than or equal to 0');
   const sumOfAttrs =
-    item.strength + item.dexerity + item.intelligence + item.vitality;
+    item.strength + item.dexterity + item.intelligence + item.vitality;
   t.ok(sumOfAttrs <= (item.level * itemAttrLimit));
 
 });
@@ -49,14 +49,14 @@ test('filter items', t => {
     {
       level: 1,
       strength: 1,
-      dexerity: 1,
+      dexterity: 1,
       intelligence: 1,
       vitality: 1
     },
     {
       level: 1,
       strength: 2,
-      dexerity: 0,
+      dexterity: 0,
       intelligence: 1,
       vitality: 1
     }
@@ -65,28 +65,28 @@ test('filter items', t => {
     {
       level: 1,
       strength: 1,
-      dexerity: 1,
+      dexterity: 1,
       intelligence: 1,
       vitality: 1,
     },
     {
       level: 1,
       strength: 2,
-      dexerity: 0,
+      dexterity: 0,
       intelligence: 1,
       vitality: 1,
     },
     {
       level: 1,
       strength: 1,
-      dexerity: 1,
+      dexterity: 1,
       intelligence: 1,
       vitality: 1,
     },
     {
       level: 1,
       strength: 2,
-      dexerity: 0,
+      dexterity: 0,
       intelligence: 1,
       vitality: 1,
     },
