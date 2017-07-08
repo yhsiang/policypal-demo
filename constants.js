@@ -1,0 +1,10 @@
+export const jobList = ['Barbarian', 'Mage', 'Hunter'];
+export const userNameList = ['Bob', 'Mike', 'Owl', 'Willy', 'Noah', 'Hawk'];
+export const maxUserLv = 20;
+export const minUserLv = 1;
+export const maxItemLv = 20;
+export const minItemLv = 1;
+export const itemAttrs = [ 'strength', 'dexerity', 'intelligence', 'vitality'];
+export const minItemAttrs = 0;
+export const itemAttrLimit = 4;
+export const itemNameList = ['Sword', 'Spear', 'Dagger', 'Huge Sword', 'Wand'];
